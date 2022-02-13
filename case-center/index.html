@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Center block</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- flex-layout -->
+    <p class="note">Центрирование через flex</p>
+    <div class="container flex">
+        <div class="center-block">Middle</div>
+    </div>
+    <p class="note-support">Хорошо поддерживается всеми браузерами кроме IE. В IE поддерживаются не все свойства</p>
+    <!-- grid-layout -->
+    <p class="note">Центрирование через grid</p>
+    <div class="container grid">
+        <div class="center-block">Middle</div>
+    </div>
+    <p class="note-support">Хорошо поддерживается всеми браузерами кроме IE. В IE поддерживаются не все свойства. В некоторых мобильных браузерах возможны баги.</p>
+    <!-- position -->
+    <p class="note">Центрирование через позиционирование</p>
+    <div class="container position">
+        <div class="center-block">Middle</div>
+    </div>
+    <p class="note-support">Хорошо поддерживается всеми браузерами. Сложность при наличии множества элементов</p>
+    <!--  inline-block  -->
+    <p class="note">Центрирование через вспомогательный блок</p>
+    <div class="container inline-block">
+        <div class="container-middle"></div>
+        <div class="container-middle-block">
+            <div class="center-block">Middle</div>
+        </div>
+    </div>
+    <p class="note-support">Хорошо поддерживается всеми браузерами, но необходим вспомогательный контейнер.</p>
+    <!--  table-cell  -->
+    <p class="note">Центрирование через таблицу</p>
+    <div class="container table">
+        <div class="table-cell">
+            <div class="center-block">Middle</div>
+        </div>
+    </div>
+    <p class="note-support">Хорошо поддерживается всеми браузерами. Неудобен в использовании так как имеет фиксированные размеры</p>
+</div>
+
+</body>
+</html>
