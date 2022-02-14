@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  height: 100%;
+  min-height: 100%; }
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  margin: 0 auto;
+  max-width: 980px;
+  padding-top: 150px; }
+
+.nav-icons {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: stretch;
+  background: #018a24; }
+  .nav-icons li {
+    flex: 1 1 auto;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-weight: bold;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; }
+    .nav-icons li div {
+      max-width: 100%; }
+    .nav-icons li span {
+      display: inline-block;
+      line-height: 50px;
+      font-size: 25px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 100%; }
+    .nav-icons li i {
+      display: block;
+      font-size: 35px;
+      float: left;
+      margin-right: 20px; }
+
+/*# sourceMappingURL=style.css.map */

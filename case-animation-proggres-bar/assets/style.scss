@@ -1,0 +1,58 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-width: 1280px;
+    margin:0 auto 0;
+    padding: 10px;
+}
+
+.container {
+    margin-top: 150px;
+
+    .progress-wrap {
+        height: 16px;
+        background:#EEEEEE;
+        border-radius: 4px;
+        width: 500px;
+
+        .progress-line {
+            height: 100%;
+            border-radius: 4px;
+            width: 70%;
+            position: relative;
+            overflow:hidden;
+
+            .progress-line-anim {
+                position: absolute;
+                left: -120px;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                background:repeating-linear-gradient(45deg, #d9534f 0, #d9534f 6px, #e48683 6px, #e48683 12px);
+                animation: 3s infinite linear lineProgress;
+            }
+        }
+    }
+}
+
+@keyframes lineProgress {
+    from {
+        left:-120px;
+    }
+    99.9999% {
+        left:0;
+    }
+    to {
+        left:-120px;
+    }
+
+}

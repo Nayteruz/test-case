@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$rb:'Roboto', sans-serif;
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    background:#333;
+}
+
+.menu-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    .menu-trigger,
+    .menu-trigger-checkbox {
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        cursor: pointer;
+        border:none;
+        background:none;
+    }
+    .menu-trigger-checkbox {
+        opacity: 0;
+        z-index: 2;
+    }
+
+    .menu-trigger > span {
+        height: 3px;
+        background:#fff;
+        display: block;
+        position: relative;
+        transition: all 0.2s linear;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: -9px;
+            height: 3px;
+            background:#fff;
+            width: 100%;
+            transition: all 0.2s linear;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -9px;
+            height: 3px;
+            background:#fff;
+            width: 100%;
+            transition: all 0.2s linear;
+        }
+    }
+
+
+    .menu-trigger-checkbox {
+        &:checked ~ ul.nav-list {
+            transform: translateX(0);
+        }
+        &:checked + .menu-trigger{
+            >span {
+                background:none;
+                &:before {
+                    background:#333;
+                    transform: rotate(45deg);
+                    top: 1px;
+                }
+                &:after {
+                    background:#333;
+                    transform: rotate(-45deg);
+                    bottom: -1px;
+                }
+            }
+        }
+    }
+
+    ul.nav-list {
+        position: absolute;
+        left: 0;
+        transform: translateX(-100%);
+        transition: all 0.2s linear;
+        width: 240px;
+        height: 100%;
+        background:#fff;
+        list-style: none;
+        padding: 60px 20px 20px;
+        margin: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: $rb;
+        font-size: 20px;
+        li {
+            a {
+                display: block;
+                text-decoration: none;
+                color: #333;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
